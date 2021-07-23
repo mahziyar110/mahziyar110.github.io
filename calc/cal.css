@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'STIX Two Math', serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.main-container {
+    width: 400px;
+    background-color: gray;
+    border: solid black 2px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.title {
+    color: cornsilk;
+}
+
+.display {
+    background-color: white;
+    border: solid black 1px;
+    width: 95%;
+    height: 50px;
+    padding: 5px 10px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    text-align: end;
+}
+
+.keypad {
+    background-color: lightgray;
+    border: solid black 1px;
+    width: 95%;
+}
+
+.row {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    height: 20%;
+}
+
+.btn {
+    background-color: lightsalmon;
+    font-weight: bold;
+    width: 25%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn:active {
+    background-color: yellowgreen;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.op {
+    background-color: orange;
+}
+
+.equals {
+    background-color: darkorange;
+}
+
+.decimal {
+    background-color: orange;
+}
+
+.about {
+    width: 50%;
+    font-size: 12px;
+}
+
+.break {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 450px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .btn {
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .btn {
+        height: 60px;
+    }
+}
