@@ -70,7 +70,7 @@ function addInput(val, item) {
             num2 = "";
             ans = "";
             flag2 = 0;
-            if (num1.includes(".")) {
+            if (num1.toString().includes(".")) {
                 flag1 = 1;
             }
             else {
@@ -108,7 +108,7 @@ function display() {
         exp = 0;
     }
     disp.innerHTML = exp;
-    // console.log(exp);
+    console.log(exp);
 }
 
 function clear() {
