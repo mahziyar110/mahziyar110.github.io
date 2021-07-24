@@ -73,7 +73,7 @@ body {
     opacity: 0.8;
 }
 
-.op {
+.op, .ac, .del {
     background-color: orange;
 }
 
@@ -81,13 +81,10 @@ body {
     background-color: darkorange;
 }
 
-.decimal {
-    background-color: orange;
-}
-
 .about {
-    width: 50%;
+    width: 54%;
     font-size: 12px;
+    background-color: orange;
 }
 
 .break {
