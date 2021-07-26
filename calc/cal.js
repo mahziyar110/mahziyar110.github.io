@@ -12,6 +12,7 @@ let num2 = "";
 let op = "";
 let ans = "";
 let flag1 = flag2 = 0;
+let clickCount = 1;
 
 
 function addInput(val, item) {
@@ -37,7 +38,14 @@ function addInput(val, item) {
     }
     else if (item.classList.contains("op")) {
         if (num1 !== "" && num1 !== "+" && num1 !== "-" && ans === "" && op === "") {
-            op = val;
+            if(num1.toString().charAt(num1.length-1) === ".")
+            {
+                num1 += 0;
+                op = val;
+            }
+            else{
+                op = val;
+            }
             display();
         }
         else if (val === "+" || val === "-") {
@@ -53,6 +61,11 @@ function addInput(val, item) {
     }
     else if (val === "=" && ans === "") {
         if (num1 !== "" && num2 !== "" && op !== "") {
+            if(num2.toString().charAt(num2.length-1) === ".")
+            {
+                num2 += 0;
+            }
+            
             switch (op) {
                 case "+": ans = +num1 + +num2;
                     break;
@@ -69,6 +82,7 @@ function addInput(val, item) {
             op = "";
             num2 = "";
             ans = "";
+            clickCount = 0;
             flag2 = 0;
             if (num1.toString().includes(".")) {
                 flag1 = 1;
@@ -121,7 +135,12 @@ function clear() {
 }
 
 function erase() {
-    if (num2 !== "") {
+    if(clickCount == 0)
+    {
+        display();
+        clickCount = 1;
+    }
+    else if (num2 !== "") {
         num2 = num2.toString().slice(0, -1);
         if (!num2.includes(".")) {
             flag2 = 0;
