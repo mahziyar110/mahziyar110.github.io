@@ -52,6 +52,11 @@ section {
 
 .institute {
     color: #1D824C;
+    padding-right: 0;
+}
+
+.comma {
+    padding: 0;
 }
 
 .location {
@@ -108,6 +113,14 @@ ul {
     body {
         width: 600px;
     }
+
+    h3 {
+        display: block;
+    }
+
+    .comma {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 625px) {
@@ -124,10 +137,6 @@ ul {
         width: 90%;
     }
 
-    .location {
-        display: block;
-    }
-
     h1 {
         font-size: 32px;
     }
@@ -138,7 +147,6 @@ ul {
     
     h3 {
         font-size: 14px;
-        display: inline;
     }
     
     h5 {
@@ -174,4 +182,5 @@ ul {
     .activities-container {
         padding-left: 0px;
     }
+
 }
