@@ -94,12 +94,22 @@ function addInput(val, item) {
     }
     else if (val === ".") {
         if (flag1 == 0 && op === "") {
-            num1 += val;
+            if(num1 === ""){
+                num1 += (0 + val);
+            }
+            else{
+                num1 += val;
+            }
             flag1 = 1;
             display();
         }
         else if (flag2 == 0 && op !== "") {
-            num2 += val;
+            if(num2 === ""){
+                num2 += (0 + val);
+            }
+            else{
+                num2 += val;
+            }
             flag2 = 1;
             display();
         }
