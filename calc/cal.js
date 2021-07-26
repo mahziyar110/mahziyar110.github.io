@@ -46,6 +46,7 @@ function addInput(val, item) {
             else{
                 op = val;
             }
+            clickCount = 1;
             display();
         }
         else if (val === "+" || val === "-") {
