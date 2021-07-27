@@ -11,129 +11,128 @@ let num1 = "";
 let num2 = "";
 let op = "";
 let ans = "";
-let flag1 = flag2 = 0;
-let clickCount = 1;
+let flag1 = flag2 = 0; // check decimal places in num1 and num2
+let clickCount = 1; // for erase() function
+
 
 
 function addInput(val, item) {
     if (val >= 0 && val <= 9 && ans === "") {
-        if (op === "") {
-            if (num1 == '0') {
-                num1 = val;
-            }
-            else {
-                num1 += val;
-            }
-            display();
-        }
-        else {
-            if (num2 == '0') {
-                num2 = val;
-            }
-            else {
-                num2 += val;
-            }
-            display();
-        }
+        numerical(val);
+        display();
     }
     else if (item.classList.contains("op")) {
-        if (num1 !== "" && num1 !== "+" && num1 !== "-" && ans === "" && op === "") {
-            if(num1.toString().charAt(num1.length-1) === ".")
-            {
-                num1 += 0;
-                op = val;
-            }
-            else{
-                op = val;
-            }
-            clickCount = 1;
-            display();
-        }
-        else if (val === "+" || val === "-") {
-            if (num1 === "") {
-                num1 = val;
-                display();
-            }
-            else if (num2 === "" && op !== "") {
-                num2 = val;
-                display();
-            }
-        }
+        operation(val, item);
+        display();
     }
     else if (val === "=" && ans === "") {
-        if (num1 !== "" && num2 !== "" && op !== "") {
-            if(num2.toString().charAt(num2.length-1) === ".")
-            {
-                num2 += 0;
-            }
-            
-            switch (op) {
-                case "+": ans = +num1 + +num2;
-                    break;
-                case "-": ans = +num1 - +num2;
-                    break;
-                case "*": ans = +num1 * +num2;
-                    break;
-                case "/": ans = +num1 / +num2;
-                    break;
-            }
-            ans = parseFloat(ans.toFixed(3));
-            display();
-            num1 = ans;
-            op = "";
-            num2 = "";
-            ans = "";
-            clickCount = 0;
-            flag2 = 0;
-            if (num1.toString().includes(".")) {
-                flag1 = 1;
-            }
-            else {
-                flag1 = 0;
-            }
-        }
+        calculate();
     }
     else if (val === ".") {
-        if (flag1 == 0 && op === "") {
-            if(num1 === ""){
-                num1 += (0 + val);
-            }
-            else{
-                num1 += val;
-            }
-            flag1 = 1;
-            display();
-        }
-        else if (flag2 == 0 && op !== "") {
-            if(num2 === ""){
-                num2 += (0 + val);
-            }
-            else{
-                num2 += val;
-            }
-            flag2 = 1;
-            display();
-        }
+        decimal();
+        display();
     }
     else if (val === "clear") {
         clear();
+        display();
     }
     else if (val === "erase") {
         erase();
+        display();
     }
 }
 
-function display() {
-    const disp = document.querySelector(".display");
-    let exp = num1 + " " + op + " " + num2 + " <br> " + ans;
-    if (num2[0] === "-" || num2[0] === "+") {
-        exp = num1 + " " + op + " (" + num2 + ") <br> " + ans;
+function numerical(val) {
+    if (op === "") {
+        if (num1 == '0') {
+            num1 = val;
+        }
+        else {
+            num1 += val;
+        }
     }
-    if (num1 === "" && num2 === "" && op === "" && ans === "") {
-        exp = 0;
+    else {
+        if (num2 == '0') {
+            num2 = val;
+        }
+        else {
+            num2 += val;
+        }
     }
-    disp.innerHTML = exp;
-    console.log(exp);
+}
+
+function operation(val, item) {
+    if (num1 !== "" && num1 !== "+" && num1 !== "-" && ans === "" && op === "") {
+        if (num1.toString().charAt(num1.length - 1) === ".") {
+            num1 += 0;
+            op = val;
+        }
+        else {
+            op = val;
+        }
+        clickCount = 1;
+    }
+    else if (op !== "" && num2 !== "" && num2 !== "+" && num2 !== "-") {
+        calculate();
+        addInput(val, item);
+    }
+    else if (val === "+" || val === "-") {
+        if (num1 === "") {
+            num1 = val;
+        }
+        else if (num2 === "" && op !== "") {
+            num2 = val;
+        }
+    }
+}
+
+function calculate() {
+    if (num1 !== "" && num2 !== "" && op !== "") {
+        if (num2.toString().charAt(num2.length - 1) === ".") {
+            num2 += 0;
+        }
+
+        switch (op) {
+            case "+": ans = +num1 + +num2;
+                break;
+            case "-": ans = +num1 - +num2;
+                break;
+            case "*": ans = +num1 * +num2;
+                break;
+            case "/": ans = +num1 / +num2;
+                break;
+        }
+        ans = parseFloat(ans.toFixed(3));
+        display();
+        num1 = ans;
+        op = "";
+        num2 = "";
+        ans = "";
+        clickCount = 0;
+        flag2 = 0;
+        num1.toString().includes(".") ? flag1 = 1 : flag1 = 0;
+    }
+}
+
+function decimal() {
+    if (flag1 == 0 && op === "") {
+        if (num1 === "") {
+            num1 += (0 + ".");
+        }
+        else {
+            num1 += ".";
+        }
+        flag1 = 1;
+    }
+    else if (flag2 == 0 && op !== "") {
+        if (num2 === "") {
+            num2 += (0 + ".");
+        }
+        else {
+            num2 += ".";
+        }
+        flag2 = 1;
+    }
 }
 
 function clear() {
@@ -142,13 +141,10 @@ function clear() {
     op = "";
     ans = "";
     flag1 = flag2 = 0;
-    display();
 }
 
 function erase() {
-    if(clickCount == 0)
-    {
-        display();
+    if (clickCount == 0) {
         clickCount = 1;
     }
     else if (num2 !== "") {
@@ -166,5 +162,17 @@ function erase() {
             flag1 = 0;
         }
     }
-    display();
+}
+
+function display() {
+    const disp = document.querySelector(".display");
+    let exp = num1 + " " + op + " " + num2 + " <br> " + ans;
+    if (num2[0] === "-" || num2[0] === "+") {
+        exp = num1 + " " + op + " (" + num2 + ") <br> " + ans;
+    }
+    if (num1 === "" && num2 === "" && op === "" && ans === "") {
+        exp = 0;
+    }
+    disp.innerHTML = exp;
+    console.log(exp);
 }
