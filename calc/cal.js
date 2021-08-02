@@ -92,6 +92,10 @@ function calculate() {
             num2 += 0;
         }
 
+        if(num2.length === 1 && (num2[0] === "+" || num2[0] === "-")) {
+            return;
+        }
+
         switch (op) {
             case "+": ans = +num1 + +num2;
                 break;
@@ -102,7 +106,8 @@ function calculate() {
             case "/": ans = +num1 / +num2;
                 break;
         }
-        ans = parseFloat(ans.toFixed(3));
+        ans = parseFloat(ans.toFixed(8));
+        // ans = Math.round((ans + Number.EPSILON) * 100) / 100;
         display();
         num1 = ans;
         op = "";
@@ -116,7 +121,7 @@ function calculate() {
 
 function decimal() {
     if (flag1 == 0 && op === "") {
-        if (num1 === "") {
+        if (num1 === "" || num1 === "+" || num1 === "-") {
             num1 += (0 + ".");
         }
         else {
@@ -125,7 +130,7 @@ function decimal() {
         flag1 = 1;
     }
     else if (flag2 == 0 && op !== "") {
-        if (num2 === "") {
+        if (num2 === ""  || num2 === "+" || num2 === "-") {
             num2 += (0 + ".");
         }
         else {
