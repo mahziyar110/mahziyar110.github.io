@@ -33,6 +33,13 @@ div {
     align-items: center;
 }
 
+.project {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
 @media only screen and (min-width: 600px) {
     body {
         width: 80%;
