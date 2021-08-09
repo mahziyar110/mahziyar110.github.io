@@ -31,9 +31,7 @@ div {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.project {
+    
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
