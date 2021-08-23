@@ -20,6 +20,7 @@ Directory for my projects hosted on https://mahziyar110.github.io/
   - Firebase authentication
   - Multiple pages (conditional rendering)
   - Local storage to remember the room booked
+- https://github.com/mahziyar110/Hostel_Allocation_Assignment
 
 ## Todoist clone
 
@@ -28,3 +29,4 @@ Directory for my projects hosted on https://mahziyar110.github.io/
   - Header, sidebar and main content area
   - Add Task corresponding to a date
   - See all tasks, today's tasks and next 7 days' tasks using different tabs
+- https://github.com/mahziyar110/todoist-clone
