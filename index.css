@@ -20,14 +20,32 @@ header {
   text-align: center;
 }
 
+h1,
+h2 {
+  margin: 5px;
+}
+
 footer {
-  margin-top: 75px;
+  margin-top: 25px;
   width: 100%;
   text-align: center;
 }
 
-body > a {
+section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+section a {
   margin: 10px 20px;
+}
+
+body > h2 {
+  width: 100%;
+  text-align: left;
 }
 
 div {
