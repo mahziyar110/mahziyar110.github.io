@@ -59,6 +59,24 @@
         </h3>
         <h3>More coming soon...</h3>
     </footer>
+
+
+    <canvas class="background"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script>window.onload = function () {
+            Particles.init(
+                {
+                    selector: '.background',
+                    maxParticles: 200,
+                    sizeVariations: 3,
+                    speed: 0.5,
+                    color: "#aaaaaa",
+                    minDistance: 50,
+                    connectParticles: true,
+                }
+            );
+        };
+    </script>
 </body>
 
 </html>
