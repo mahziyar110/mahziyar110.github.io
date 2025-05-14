@@ -55,6 +55,14 @@ section {
 
 section a {
   margin: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+section a:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  transition: all 0.2s ease-in-out;
 }
 
 body > h2 {
@@ -62,7 +70,7 @@ body > h2 {
   text-align: left;
 }
 
-div {
+section div {
   height: 150px;
   width: 150px;
   display: flex;
