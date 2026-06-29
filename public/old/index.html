@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>mahziyar110</title>
+    <link rel="stylesheet" href="./index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Welcome!<br><br>Have a look at my projects...</h1>
+    </header>
+
+    <h2>React:</h2>
+    <section>
+        <a href="https://mahziyar110.github.io/noted/" target="_blank">
+            <div style="background-image: url(./img/noted.png);">
+                <h2>Noted</h2>
+            </div>
+        </a>
+        <a href="https://mahziyar110.github.io/secret-letters/" target="_blank">
+            <div style="background-image: url(./img/encryption.png);">
+                <h2>Secret Letters</h2>
+            </div>
+        </a>
+        <a href="https://mahziyar110.github.io/random-canvas/" target="_blank">
+            <div style="background-image: url(./img/canvas.png);">
+                <h2>Random Canvas Generator</h2>
+            </div>
+        </a>
+        <a href="https://mahziyar110.github.io/Hostel_Allocation_Assignment/" target="_blank">
+            <div style="background-image: url(./img/hostel.png);">
+                <h2>Hostel Allocation</h2>
+            </div>
+        </a>
+        <a href="https://mahziyar110.github.io/todoist-clone/" target="_blank">
+            <div style="background-image: url(./img/todoist.png);">
+                <h2>Todoist Clone</h2>
+            </div>
+        </a>
+        <a href="https://mahziyar110.github.io/react-app/#/news-weather" target="_blank">
+            <div style="background-image: url(./img/news.png);">
+                <h2>News</h2>
+            </div>
+        </a>
+    </section>
+
+    <h2>Chrome Extension:</h2>
+    <section>
+        <a href="https://chromewebstore.google.com/detail/imdb-movie-search/egabglmdedhdebfhabfphfkibcaceknn"
+            target="_blank">
+            <div style="background-image: url(./img/imdb.png);">
+                <h2>IMDB Movie Search</h2>
+            </div>
+        </a>
+    </section>
+
+    <h2>HTML/CSS/JS:</h2>
+    <section>
+        <a href="./responsive-cv/cv.html" target="_blank">
+            <div style="background-image: url(./img/cv.png);">
+                <h2>CV</h2>
+            </div>
+        </a>
+        <a href="https://mahziyar110.github.io/calculator/" target="_blank">
+            <div style="background-image: url(./img/calc.png);">
+                <h2>Calculator</h2>
+            </div>
+        </a>
+        <a href="https://mahziyar110.github.io/coding-practice/Front-end/tic-tac-toe/index.html" target="_blank">
+            <div style="background-image: url(./img/ttt.png);">
+                <h2>Tic Tac Toe</h2>
+            </div>
+        </a>
+        <a href="https://mahziyar110.github.io/coding-practice/Front-end/deck-of-cards/index.html" target="_blank">
+            <div style="background-image: url(./img/deck.png);">
+                <h2>Deck of Cards</h2>
+            </div>
+        </a>
+    </section>
+
+    <footer>
+        <h3><a href="https://mahziyar110.github.io/coding-practice/" target="_blank">Mini projects (coding practice)</a>
+        </h3>
+        <h3>More coming soon...</h3>
+    </footer>
+
+
+    <canvas class="background"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script>window.onload = function () {
+            Particles.init(
+                {
+                    selector: '.background',
+                    maxParticles: 200,
+                    sizeVariations: 3,
+                    speed: 0.5,
+                    color: "#aaaaaa",
+                    minDistance: 50,
+                    connectParticles: true,
+                    responsive: [{
+                        breakpoint: 800,
+                        options: {
+                            maxParticles: 100,
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        options: {
+                            maxParticles: 100,
+                            minDistance: 30,
+                        }
+                    }]
+                }
+            );
+        };
+    </script>
+</body>
+
+</html>

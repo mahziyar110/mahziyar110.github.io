@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  font-family: "STIX Two Math", serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin: 5px;
+}
+
+footer {
+  margin-top: 25px;
+  width: 100%;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+section a {
+  margin: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+section a:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  transition: all 0.2s ease-in-out;
+}
+
+body > h2 {
+  width: 100%;
+  text-align: left;
+}
+
+section div {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+div h2 {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  margin: 0;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    width: 80%;
+  }
+}
