@@ -9,7 +9,7 @@ import LandingSection from "./components/LandingSection";
 function App() {
   return (
     <>
-      <main className="h-screen overflow-y-auto snap-y snap-mandatory scroll-smooth">
+      <main className="h-dvh overflow-y-auto snap-y snap-mandatory scroll-smooth">
         <LandingSection />
         <AboutMe />
         <Experience />

@@ -167,9 +167,9 @@ button:hover::before {
   }
 
   /* Remove viewport/scroll constraints */
-  .h-screen,
+  .h-dvh,
   .h-full,
-  .min-h-screen,
+  .min-h-dvh,
   .overflow-hidden,
   .overflow-x-auto,
   .overflow-y-auto {

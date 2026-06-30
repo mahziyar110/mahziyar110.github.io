@@ -2,7 +2,7 @@ import aboutMeData from "../data/aboutMe";
 
 const AboutMe = () => {
   return (
-    <section className="h-screen snap-start overflow-hidden bg-softGray">
+    <section className="h-dvh snap-start overflow-hidden bg-softGray">
       <div className="relative flex h-full items-center">
         {/* Background */}
         <div className="no-print absolute inset-x-0 top-0 px-5 sm:px-8">

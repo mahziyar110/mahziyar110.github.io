@@ -10,7 +10,7 @@ const LandingSection = () => {
   };
 
   return (
-    <section className="flex h-screen snap-start flex-col overflow-hidden">
+    <section className="flex h-dvh snap-start flex-col overflow-hidden">
       {/*Header*/}
       <header className="navbar w-full">
         <div className="container">

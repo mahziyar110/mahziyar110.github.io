@@ -2,7 +2,7 @@ import educationData from "../data/education";
 
 const EducationSkills = () => {
   return (
-    <section className="h-screen snap-start overflow-hidden">
+    <section className="h-dvh snap-start overflow-hidden">
       <div className="container relative flex h-full flex-col py-6 md:py-10">
         {/* Background Decoration */}
         <img

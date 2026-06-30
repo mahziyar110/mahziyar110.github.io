@@ -56,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="no-print h-screen snap-start overflow-hidden">
+    <section className="no-print h-dvh snap-start overflow-hidden">
       <div className="container flex h-full flex-col py-6 md:py-10">
         {/* Header */}
         <div className="mt-10 lg:mt-32 flex items-center justify-between border-b border-black pb-4 md:pb-6">
@@ -72,7 +72,7 @@ const Contact = () => {
             {!submitted && (
               <form onSubmit={handleSubmit} className="flex flex-col justify-center">
                 <fieldset disabled={isSubmitting} className="space-y-3 sm:space-y-6">
-                  <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                  <div className="grid grid-cols-1 gap-2 xs:gap-6 sm:grid-cols-2">
                     <div>
                       <label className="label">Name *</label>
 
@@ -110,8 +110,7 @@ const Contact = () => {
                     <label className="label">Message *</label>
 
                     <textarea
-                      rows={3}
-                      className="input resize-none"
+                      className="input h-16 md:h-24 resize-none"
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
