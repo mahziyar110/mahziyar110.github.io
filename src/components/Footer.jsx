@@ -26,7 +26,7 @@ const Footer = () => {
 
           <p className="flex flex-col items-center xs:block text-secondary">
             <span>
-              Copyright © {contactData.fullname} ( {new Date().getFullYear()} )
+              Copyright © {new Date().getFullYear()} {contactData.fullname}
             </span>
             <span className="hidden xs:inline"> • </span>
             <span onClick={() => scrollToTop()} className="text-primary hover:underline cursor-pointer">
