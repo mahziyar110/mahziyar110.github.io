@@ -21,6 +21,12 @@ const workData = [
     link: "https://mahziyar110.github.io/noted/",
   },
   {
+    image: "/images/work/global_news.png",
+    title: "Global News",
+    description: "News aggregation platform featuring a React frontend and a caching Node.js backend",
+    link: "https://mahziyar110.github.io/global-news/",
+  },
+  {
     image: "/images/work/secret_letters.png",
     title: "Secret Letters",
     description: "Encrypt and decrypt messages using secret-key or randomly generated letter mappings.",
